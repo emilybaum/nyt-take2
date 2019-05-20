@@ -1,0 +1,102 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>
+            NYTimes
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+            crossorigin="anonymous">
+
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+             crossorigin="anonymous">
+         </script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+             crossorigin="anonymous">
+         </script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+             crossorigin="anonymous">
+         </script>
+         <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <div class="jumbotron text-center pt-4">
+            <div class="container pt-3">
+                <img id="jumbotron-icon" class="d-inline" src="./assets/images/post-card-icon-614x460.png">
+                <h3 class="display-8 d-inline font-weight-bold">New York Times Search</h3>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row m-1">
+                <div class="col-12 border rounded">
+                    <div class="row">
+                        <div class="col-12 bg-light pt-2 border-bottom" id="parameter">
+                            <p class="font-weight-bold">
+                                <img id="parameter-icon" class="d-inline pr-1" src="./assets/images/browser-icon-614x460.png">
+                                Search Parameter
+                            </p>                   
+                        </div>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-12">
+                            <form>
+                                <div class="form-group">
+                                    <label for="search-term">Search Term:</label>
+                                    <input type="text" class="form-control" id="search-term" placeholder="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="records">Number of Records to Retrieve:</label>
+                                    <select class="form-control" id="records" required>
+                                      <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5" selected>5</option>
+                                   </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="start-year">Start Year (Optional):</label>
+                                    <input type="text" class="form-control" id="start-year" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="end-year">End Year (Optional):</label>
+                                    <input type="text" class="form-control" id="end-year" placeholder="">
+                                </div>
+                                <span id="search" class="m-2"><img id="search-icon" class="d-inline" src="./assets/images/search-icon-2-614x460.png">Search</span>
+                                <span id="clear" class="m-2"><img id="trash-icon" class="d-inline" src="./assets/images/trash-icon-614x460.png">Clear Results</span>
+                          </form>
+                        </div>
+                  </div>                   
+                </div>
+            </div>
+            <div class="row m-1 mt-4">
+                <div class="col-12 border rounded">
+                    <div class="row">
+                        <div class="col-12 bg-light pt-2 border-bottom" id="articles">
+                            <p class="font-weight-bold">
+                                <img id="article-icon" class="d-inline" src="./assets/images/paper-icon-614x460.png">
+                                Top Articles
+                            </p>                   
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" id="article-items">                   
+                        </div>
+                    </div>                 
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <hr>
+                    <p>
+                        Made with lots and lots of &#x2764;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
