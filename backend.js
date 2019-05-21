@@ -39,7 +39,7 @@ function assignToDOM(response) {
         var pub_date = articles[i].pub_date
         var url = articles[i].web_url
 
-        var result = '<div class="article-item"><p class="headline"><h5>' + headline + '</h5></p><p class="author">' +  author + '</p><p class="section">Section: ' + section + '</p><p class="pub-date">' + pub_date + '</p><p class="url">' + url + '</p></div><br>'
+        var result = '<div class="article-item m-4 p-1"><p class="headline"><h5>' + headline + '</h5></p><p class="author">' +  author + '</p><p class="section">Section: ' + section + '</p><p class="pub-date">' + pub_date + '</p><p class="url">' + url + '</p></div>'
 
         $("#article-items").append(result)
     }
