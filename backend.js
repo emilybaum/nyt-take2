@@ -1,5 +1,7 @@
 function displayArticles() {
 
+    clear();
+
     // info from user input form
     var searchTerm = $("#search-term").val().trim();
     var startYear = $("#start-year").val().trim();
