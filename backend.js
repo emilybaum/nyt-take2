@@ -1,6 +1,4 @@
-function displayArticles() {
-
-    clear();
+function getArticles() {
 
     // info from user input form
     var searchTerm = $("#search-term").val().trim();
@@ -20,12 +18,13 @@ function displayArticles() {
         url: queryUrl,
         method: "GET"
     }).done(function (response) {
-        console.log(response);
-        assignToDOM(response);
+        displayArticles(response);
     })
 };
 
-function assignToDOM(response) {
+function displayArticles(response) {
+
+    clear();
 
     var articles = response.response.docs;
 
@@ -44,6 +43,7 @@ function assignToDOM(response) {
             author = articles[i].byline.original
 
         }
+
         var section = articles[i].section_name
         var pub_date = articles[i].pub_date
         var url = articles[i].web_url
@@ -59,7 +59,7 @@ function clear(){
 }
 
 $(document).ready(function () {
-    $(document).on("click", "#search", displayArticles);
+    $(document).on("click", "#search", getArticles);
     $(document).on("click", "#clear", clear);     
 });
 
