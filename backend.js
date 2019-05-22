@@ -34,8 +34,17 @@ function assignToDOM(response) {
     for(var i = 0; i < count; i++){
 
         var headline = articles[i].headline.main
-        var author = articles[i].byline.original
-        var section = articles[i].news_desk
+        var author;
+
+        if (articles[i].byline.original == null) {
+            author = "Unknown"
+
+        }
+        else {
+            author = articles[i].byline.original
+
+        }
+        var section = articles[i].section_name
         var pub_date = articles[i].pub_date
         var url = articles[i].web_url
 
